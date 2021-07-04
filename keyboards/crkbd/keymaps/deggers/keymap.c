@@ -19,6 +19,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include QMK_KEYBOARD_H
 #include <stdio.h>
 
+enum combos {
+  GM,
+  MF
+};
+
+const uint16_t PROGMEM gm_combo[] = {KC_G, KC_M, COMBO_END};
+const uint16_t PROGMEM mf_combo[] = {KC_M, KC_F, COMBO_END};
+
+combo_t key_combos[COMBO_COUNT] = {
+  [GM] = COMBO(gm_combo, KC_LEFT_PAREN),
+  [MF] = COMBO(mf_combo, KC_RIGHT_PAREN)
+};
+
 enum layer_number {
   _BASE,
   _NAV,
