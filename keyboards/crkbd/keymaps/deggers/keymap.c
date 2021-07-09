@@ -39,23 +39,22 @@ enum layer_number {
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [_BASE] = LAYOUT_split_3x6_3(
-      KC_NO,    KC_Q,     KC_C,    KC_H,    KC_W,     KC_V,                         KC_QUES,  KC_Y,     KC_U,       KC_J,            KC_SLASH,            KC_NO,
-      KC_NO,    KC_R,     KC_S,    KC_N,    KC_T,     KC_G,                         KC_P,     KC_A,     KC_I,       MT(MOD_LALT,KC_O), MT(MOD_RGUI,KC_K), KC_NO,
-      KC_NO,    KC_X,     KC_M,    KC_L,    KC_D,     KC_B,                         KC_Z,     KC_F,     KC_DQT,     KC_COMMA,              KC_DOT,        KC_NO,
-                          KC_ESC,   LT(_NAV,KC_SPC),  KC_TAB,                       KC_ENT,   LT(_NUM,KC_E), KC_NO
-
+  [_BASE] = LAYOUT_split_3x5_3(
+          KC_Q,                  KC_C,                 KC_H,                 KC_W,                  KC_V,                                      KC_QUES,                KC_Y,                  KC_K,               KC_J,              KC_SLASH,
+          MT(MOD_RGUI,KC_R),     MT(MOD_LALT,KC_S),    MT(MOD_LCTL,KC_N),    MT(MOD_LSFT,KC_T),     MT(MOD_RALT,KC_G),                         MT(MOD_RALT,KC_P),     MT(MOD_LSFT,KC_A),     MT(MOD_LCTL,KC_U), MT(MOD_LALT,KC_O), MT(MOD_RGUI,KC_I),
+          KC_X,                  KC_M,                  KC_L,                KC_D,                   KC_B,                                     KC_Z,                  KC_F,                  KC_DQT,               KC_COMMA,          KC_DOT,
+                          KC_ESC,  LT(_NAV,KC_SPC), KC_TAB,                  KC_ENT, LT(_NUM,KC_E), KC_NO
   ),
-  [_NAV] = LAYOUT_split_3x6_3(
-      KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,                                   KC_NO, KC_NO,    KC_NO,    KC_NO,    KC_NO, KC_NO,
-      KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,                                   KC_LEFT, KC_DOWN,   KC_UP,KC_RIGHT, KC_NO, KC_NO,
-      KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,                                   KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
-                        KC_NO, KC_TRNS,  KC_NO,                                   KC_NO,   KC_BSPC, KC_NO
+  [_NAV] = LAYOUT_split_3x5_3(
+       KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,                                   KC_NO, KC_NO,    KC_NO,    KC_NO,    KC_NO,
+       KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,                                   KC_LEFT, KC_DOWN,   KC_UP,KC_RIGHT, KC_NO,
+       KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,                                   KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+                        KC_NO, KC_TRNS,  KC_NO,                             KC_ENT,   KC_BSPC, KC_NO
   ),
-  [_NUM] = LAYOUT_split_3x6_3(
-      KC_NO, KC_NO, KC_4,  KC_5, KC_6, KC_NO,                                     KC_NO, KC_NO,    KC_NO,    KC_NO,    KC_NO, KC_NO,
-      KC_NO, KC_NO, KC_1,  KC_2, KC_3, KC_NO,                                     KC_LEFT, KC_DOWN,   KC_UP,KC_RIGHT, KC_NO, KC_NO,
-      KC_NO, KC_NO, KC_7,  KC_8, KC_9, KC_NO,                                     KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+  [_NUM] = LAYOUT_split_3x5_3(
+       KC_NO, KC_4,  KC_5, KC_6, KC_NO,                                     KC_NO, KC_NO,    KC_NO,    KC_NO,    KC_NO,
+       KC_NO, KC_1,  KC_2, KC_3, KC_NO,                                     KC_NO, KC_NO, KC_NO, KC_NO,  KC_LGUI,
+       KC_NO, KC_7,  KC_8, KC_9, KC_NO,                                     KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
                       KC_NO, KC_TRNS,  KC_NO,                                     KC_NO,   KC_BSPC, KC_NO
   ),
 };
