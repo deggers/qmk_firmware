@@ -40,9 +40,9 @@ enum layer_number {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BASE] = LAYOUT_split_3x5_3(
-          KC_Q,                  KC_C,                 KC_H,                 KC_W,                  KC_V,                                      KC_QUES,                KC_Y,                  KC_K,               KC_J,              KC_SLASH,
-          MT(MOD_RGUI,KC_R),     MT(MOD_LALT,KC_S),    MT(MOD_LCTL,KC_N),    MT(MOD_LSFT,KC_T),     MT(MOD_RALT,KC_G),                         MT(MOD_RALT,KC_P),     MT(MOD_LSFT,KC_A),     MT(MOD_LCTL,KC_U), MT(MOD_LALT,KC_O), MT(MOD_RGUI,KC_I),
-          KC_X,                  KC_M,                  KC_L,                KC_D,                   KC_B,                                     KC_Z,                  KC_F,                  KC_DQT,               KC_COMMA,          KC_DOT,
+          KC_B,                  KC_C,                 KC_H,                 KC_W,                  KC_SLASH,                                      KC_QUES,                KC_Y,                  KC_O,               KC_U,              KC_Q,
+          MT(MOD_RGUI,KC_R),     MT(MOD_LALT,KC_S),    MT(MOD_LCTL,KC_N),    MT(MOD_LSFT,KC_T),     MT(MOD_RALT,KC_QUOTE),                         MT(MOD_RALT,KC_P),     MT(MOD_LSFT,KC_I),     MT(MOD_LCTL,KC_A), MT(MOD_LALT,KC_K), MT(MOD_RGUI,KC_G),
+          KC_V,                  KC_M,                  KC_L,                KC_D,                   KC_COMMA,                                     KC_DOT,                  KC_F,                  KC_J,               KC_X,          KC_Z,
                           KC_ESC,  LT(_NAV,KC_SPC), KC_TAB,                  KC_ENT, LT(_NUM,KC_E), KC_NO
   ),
   [_NAV] = LAYOUT_split_3x5_3(
